@@ -1,0 +1,116 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #cccccc;
+}
+.logo {
+  margin-left: 13rem;
+}
+.logoContainer {
+  width: 100px;
+  height: 20px;
+}
+.links {
+  margin: 0 auto;
+  li {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .home a {
+    font-weight: bold;
+  }
+}
+.efeito-hover {
+  display: inline-block;
+  position: relative;
+}
+.efeito-hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #000000ab;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.efeito-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.horizontalLine {
+  position: initial;
+  width: 100%;
+  border: 1px solid #000;
+}
+.lateralMenuIcon {
+  display: none;
+  margin-right: 19rem;
+}
+
+nav {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+}
+.list {
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.items {
+  margin-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 27px;
+  font-size: 18px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  nav {
+    opacity: 1;
+  }
+  .list {
+    background: rgba(0, 0, 0, 0.671);
+    flex-direction: column;
+    height: auto;
+  }
+  .items:nth-child(1) {
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    margin-top: 75px;
+  }
+  .items {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    text-align: center;
+    margin-right: 0px;
+    padding: 20px 0;
+  }
+  .btn {
+    display: block;
+  }
+  .headerContainer {
+    border-bottom: none;
+  }
+}
