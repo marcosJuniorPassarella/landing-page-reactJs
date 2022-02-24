@@ -53,7 +53,7 @@
 }
 
 nav {
-  opacity: 0;
+  display: none;
   position: fixed;
   top: 0;
   width: 100%;
@@ -89,7 +89,7 @@ nav {
 
 @media screen and (max-width: 680px) {
   nav {
-    opacity: 1;
+    display: initial;
   }
   .list {
     background: rgba(0, 0, 0, 0.671);
